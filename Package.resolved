@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "snsconnecttencentrebuild",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anotheren/SNSConnectTencentRebuild.git",
+      "state" : {
+        "revision" : "b21264b1a64b547c0b3ea7da2efe2b78e6a334b4",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "snsconnectwechatrebuild",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anotheren/SNSConnectWechatRebuild.git",
+      "state" : {
+        "revision" : "f5edf67a63ccd2503ac75720b7f8af9716fccde8",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "snsconnectweiborebuild",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anotheren/SNSConnectWeiboRebuild.git",
+      "state" : {
+        "revision" : "42522b64fb30e1b73767d6b196fa88b8b163a052",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
