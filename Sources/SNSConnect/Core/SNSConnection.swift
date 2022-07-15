@@ -10,7 +10,6 @@ import Foundation
 
 public protocol SNSConnection: SNSPlatformContent {
     
-    var universalLink: String { get }
     var features: [SNSFeature] { get }
     
     func register()
@@ -22,14 +21,8 @@ public protocol SNSConnection: SNSPlatformContent {
     func openApp() -> Bool
     
     func handleOpenURL(_ url: URL) -> Bool
+    func canHandleUniversalLink(_ url: URL) -> Bool
     func handleUniversalLink(_ url: URL, userActivity: NSUserActivity) -> Bool
-}
-
-extension SNSConnection {
-    
-    func canHandleUniversalLink(_ url: URL) -> Bool {
-        url.absoluteString.hasPrefix(universalLink)
-    }
 }
 
 #if DEBUG

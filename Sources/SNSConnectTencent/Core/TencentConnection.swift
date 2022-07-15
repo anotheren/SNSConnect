@@ -67,13 +67,17 @@ extension TencentConnection: SNSConnection {
     }
     
     public func handleOpenURL(_ url: URL) -> Bool {
-        if TencentOAuth.canHandleOpen(url) {
+        if TencentOAuth.handleOpen(url) {
             return true
         } else if QQApiInterface.handleOpen(url, delegate: coodinator) {
             return true
         } else {
             return false
         }
+    }
+    
+    public func canHandleUniversalLink(_ url: URL) -> Bool {
+        url.absoluteString.hasPrefix(universalLink)
     }
     
     public func handleUniversalLink(_ url: URL, userActivity: NSUserActivity) -> Bool {

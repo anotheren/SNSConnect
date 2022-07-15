@@ -73,6 +73,10 @@ extension WechatConnection: SNSConnection {
         WXApi.handleOpen(url, delegate: coodinator)
     }
     
+    public func canHandleUniversalLink(_ url: URL) -> Bool {
+        url.absoluteString.hasPrefix(universalLink)
+    }
+    
     public func handleUniversalLink(_ url: URL, userActivity: NSUserActivity) -> Bool {
         WXApi.handleOpenUniversalLink(userActivity, delegate: coodinator)
     }
